@@ -2,21 +2,28 @@ public class Feeder {
 
     public Feeder() {}
     private int currentFood;
-    public int getCurrentFood()
+
+  public int getCurrentFood()
     {
         return currentFood;
     }
-    public Feeder (int c)
+
+  public Feeder (int c)
     {
         currentFood = c;
     }
-    public String toString()
-{
-    return "Current Food: " + currentFood;
-}
-   public void simulateOneDay(int numBirds)
+
+  public String toString()
     {
-      if (Math.random() < 0.05) currentFood=0;
+    return "Current Food: " + currentFood;
+    }
+
+  public void simulateOneDay(int numBirds)
+    {
+      if (Math.random() < 0.05) 
+      {
+        currentFood=0;
+      }
       else 
       {
        int eaten = (int) (Math.random() * 41)+10;
@@ -27,7 +34,7 @@ public class Feeder {
     }
 
   
-    public int simulateManyDays(int numBirds, int numDays) 
+  public int simulateManyDays(int numBirds, int numDays) 
     {
      int days=0;
      for (int test=0;test<numDays;test++)
@@ -36,6 +43,7 @@ public class Feeder {
         if (currentFood==0)
         {
             days++;
+     
         }
      }
      days=numDays-days;
