@@ -39,12 +39,12 @@ public class Feeder {
      int days=0;
      for (int test=0;test<numDays;test++)
      {
-        simulateOneDay(numBirds);
-        if (currentFood==0)
+      if (currentFood==0)
         {
             days++;
      
         }
+        simulateOneDay(numBirds);
      }
      days=numDays-days;
      return days;
